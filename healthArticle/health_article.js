@@ -4,13 +4,11 @@ var url = './health_article.json';
 xhr.open('GET', url, true);
 xhr.responseType = 'json';
 
+console.log(xhr.response);
 
 var articles = xhr.response.articles;
 var articlesDiv = document.getElementById('articles');
 
-
-
-xhr.send();
 
 articles.forEach(function(article) {
     var articleDiv = document.createElement('div');
@@ -54,3 +52,5 @@ articles.forEach(function(article) {
 
 
   });
+
+  xhr.send();
